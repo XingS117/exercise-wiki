@@ -192,6 +192,12 @@
   .hero__wall-card { animation: none; }
 }
 
+/* 平板宽度不足以容纳大标题与动作墙时改为单栏，避免标题逐字折行 */
+@media (max-width: 900px) and (min-width: 641px) {
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__wall { max-width: 560px; justify-self: end; width: 100%; }
+}
+
 /* Browse入口:把原本只能点选的筛选维度变成可分享的专题链接 */
 .browse-links-pair {
   display: grid;

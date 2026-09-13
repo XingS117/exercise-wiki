@@ -12,6 +12,7 @@ import CollectionLinks from '../components/CollectionLinks'
 import { COLLECTIONS } from '../lib/collections'
 import { guides } from '../data/guides'
 import { guidePath } from '../lib/guides'
+import { GUIDE_VISUAL_IDS } from '../lib/guideVisuals'
 
 const DATA = exercises as Exercise[]
 
@@ -32,11 +33,6 @@ const equipmentCounts = countBy((e) => e.equipment)
 const targetCounts = countBy((e) => e.target)
 const bodyBrowseLinks = COLLECTIONS.filter((collection) => collection.kind === 'body-part').slice(0, 6)
 const equipmentBrowseLinks = COLLECTIONS.filter((collection) => collection.kind === 'equipment').slice(0, 6)
-const GUIDE_VISUAL_IDS: Record<string, string> = {
-  'beginner-chest-workout': '0025',
-  'home-bodyweight-full-body': '0662',
-  'beginner-dumbbell-full-body': '0413',
-}
 const guideVisuals = new Map(
   guides.map((guide) => [guide.slug, DATA.find((exercise) => exercise.id === GUIDE_VISUAL_IDS[guide.slug])])
 )
