@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+文星 Logo · favicon 简化版(16-32px 专用)
+适用:浏览器 favicon、小图标位、桌面快捷方式
+设计取舍:"文"字在 32px 以下完全不可读,简化为"星+圆点"
+   - 5 角星:深蓝渐变填充(实心)+ 金色描边
+   - 中心圆点:金黄(代表"文"的精简抽象)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="文星">
+  <defs>
+    <linearGradient id="wx-fav-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="64" height="64" rx="12" fill="url(#wx-fav-bg)"/>
+  <!-- 实心 5 角星(简化版用填充而非描边,在 16px 下辨识度更高) -->
+  <path d="M 32 8 L 38.4 25.5 L 56 25.5 L 42 36 L 47 53 L 32 43.5 L 17 53 L 22 36 L 8 25.5 L 25.6 25.5 Z"
+    fill="#ffffff" stroke="#fde047" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- 中心金点(代表"文") -->
+  <circle cx="32" cy="33" r="4" fill="#fde047"/>
+</svg>

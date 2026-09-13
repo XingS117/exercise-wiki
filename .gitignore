@@ -1,0 +1,8 @@
+node_modules/
+dist/
+_research/
+reports/
+_temp/
+shots/
+.playwright-cli/
+*.tsbuildinfo
