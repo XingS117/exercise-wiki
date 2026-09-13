@@ -13,6 +13,7 @@ import { getCollection } from './lib/collections'
 import { getGuide } from './lib/guides'
 import type { Exercise } from './lib/types'
 import { useViewMode } from './lib/useViewMode'
+import { getRouteScrollTarget } from './lib/routeScroll'
 import GuideIndexPage from './pages/GuideIndexPage'
 import GuidePage from './pages/GuidePage'
 import EditorialPolicyPage from './pages/EditorialPolicyPage'
@@ -27,9 +28,8 @@ export default function App() {
   // 进入详情页:回到页面顶部(交互习惯:详情从开头看)
   // 返回列表的滚动/搜索恢复由 HomePage 挂载时从 listState 读取,这里不处理
   useEffect(() => {
-    if (location.pathname.startsWith('/exercise')) {
-      window.scrollTo(0, 0)
-    }
+    const target = getRouteScrollTarget(location.pathname)
+    if (target !== null) window.scrollTo(0, target)
   }, [location.pathname])
 
   useEffect(() => {
